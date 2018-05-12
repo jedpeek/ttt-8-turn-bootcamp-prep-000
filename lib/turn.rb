@@ -44,7 +44,7 @@ def turn(board)
   input = gets.strip
   input_to_index(input)
   while(valid_move?(board, index))
-    "Not a valid move. Enter a number 1-9."
+    puts "Not a valid move. Enter a number 1-9."
     user_input = gets.strip
     input_to_index(input)
   end
