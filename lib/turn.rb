@@ -31,8 +31,8 @@ end
 
 
 def input_to_index(user_input)
-  index = (user_input.to_i)-1
-  return index
+  input = (user_input.to_i)-1
+  return input
 end
 
 def move(array, index, value = "X")
@@ -41,12 +41,12 @@ end
 
 def turn(board)
   puts "Please enter 1-9:"
-  index = gets.strip
-  input_to_index(index)
-  while(valid_move?(board, index))
+  input = gets.strip
+  input_to_index(input)
+  while(valid_move?(board, input))
     "Not a valid move. Enter a number 1-9."
     user_input = gets.strip
-    input_to_index(user_input)
+    input_to_index(input)
   end
-  move(board, index, value)
+  move(board, input, value)
 end
